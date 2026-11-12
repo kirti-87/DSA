@@ -24,7 +24,6 @@ public:
                 }else{//left
                      end=mid-1;
                 }
-
             }
         }
         return -1;
