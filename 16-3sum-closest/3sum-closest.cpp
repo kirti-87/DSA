@@ -9,19 +9,10 @@ public:
             int right = n - 1;
             while (left < right) {
                 int sum = nums[i] + nums[left] + nums[right];
-                if (abs(sum - target) <
-                    abs(closestSum - target)) {
-                    closestSum = sum;
-                }
-                if (sum == target) {
-                    return sum;
-                }
-                else if (sum < target) {
-                    left++;
-                }
-                else {
-                    right--;
-                }
+                if (abs(sum - target)<abs(closestSum - target)) closestSum = sum;
+                if (sum == target)  return sum;
+                else if (sum < target) left++;
+                else right--;
             }
         }
         return closestSum;
